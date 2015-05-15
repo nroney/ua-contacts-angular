@@ -1,0 +1,242 @@
+/* app css stylesheet */
+
+
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-custom {
+	background-color: #008000;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	width: 60px;
+
+}
+
+.btn-custom:hover {
+	opacity: 0.7;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+body {
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/* Header
+   ========================================================================== */
+
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #109d58;
+	-webkit-box-shadow: 0 1px 5px #000;
+	-moz-box-shadow: 0 1px 5px #000;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	z-index: 10;
+}
+
+.header .search-bar {
+	position: relative;
+	height: 60px;
+	padding: 15px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.header .search-bar input {
+	width: 70%;
+	max-width: 280px;
+	height: 30px;
+	padding: 0 10px;
+	border-radius: 4px;
+	background-color: #FFF;
+	border: 0;
+	color: #333;
+}
+
+.header .filter-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 50px;
+	width: 50px;
+	background-image: url("images/Filter-50.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+
+.header .filter-button:hover {
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.header .filter-container {
+	position: absolute;
+	right:0;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.9;
+	background-color: #008000;
+	z-index: 999999;
+}
+
+.header .filter-container:before {
+	position: absolute;
+	top:-10px;
+	right: 20px;
+	content:"\A";
+	border-bottom:10px solid #008000;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+}
+
+.header .filter-container .custom-filter {
+	position: relative;
+	height: 50px;
+	text-align: right;
+	padding:15px 60px 15px 15px;
+	box-sizing: border-box;
+}
+
+.header .filter-container select {
+	width: 100px;
+	border: 0;
+}
+
+.header .filter-container .cancel-button {
+	position: absolute;
+	top:0;
+	right:0;
+	height: 50px;
+	width: 50px;
+	background: url("images/Close-50.png") no-repeat 50% 50%;
+	background-size: 40%;
+}
+
+.header .filter-container .cancel-button:hover {
+	opacity: 0.9;
+}
+
+
+
+/* Footer
+   ========================================================================== */
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	background-color: #008000;
+	text-align: center;
+}
+
+.pagination {
+	margin: 5px 12px !important;
+}
+
+.pagination li span {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+
+/* List
+   ========================================================================== */
+
+#contactList {
+	position: relative;
+	margin: 60px 0 60px;
+	padding: 0;
+}
+
+#contactList > li {
+	min-height: 40px;
+	padding: 15px 15px 0;
+	border-bottom: 1px solid #ccc;
+	list-style: none;
+}
+
+#contactList > li .contact-name {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.hidden-info ul {
+	padding: 0 0 0 10px;
+}
+
+.hidden-info ul li {
+	border: none;
+	font-size: 12px;
+}
+
+
+/* Pagination
+   ========================================================================== */
+.paginationclass {
+	margin: 19px 28px;
+}
+
+.pagination-controle {
+	padding: 0;
+}
+
+.paginationclass span {
+	margin-left: 15px;
+	display: inline-block;
+}
+
+.pagination-controle li {
+	display: inline-block;
+}
+
+.pagination-controle button {
+	font-size: 12px;
+	margin-top: -26px;
+	cursor: pointer;
+}
+
+.page-number {
+	color: #fff;
+	font-size: 14px;
+}
+
+.page-number-selector {
+	position: absolute;
+	border: 0;
+	width: 150px;
+	right: 5px;
+	top: 8px;
+	background-color: #008000;
+	color: #fff;
+}

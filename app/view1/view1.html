@@ -1,0 +1,59 @@
+<div ng-controller="View1Ctrl ">
+	<div class="header">
+		<div class='search-bar'>
+			<span><input ng-model="searchText" ng-change="search()" placeholder="Search"/></span>
+		</div>
+		<span class="filter-button" ng-click="showFilter = ! showFilter"></span>
+
+		<div class="filter-container" ng-show="showFilter">
+			<div class="custom-filter">
+				Filter By:
+				<select ng-change="search()" ng-model="state" ng-options="state for state in states"></select>
+
+				<span class="cancel-button" ng-click="clearFilters()"></span>
+			</div>
+		</div>
+	</div>
+
+	<ul id="contactList">
+		<li class="contact-main"
+			ng-repeat="contact in contacts"
+			ng-click="showDetails = ! showDetails">
+			<span class="contact-name">{{contact.first_name}} {{contact.last_name}}</span>
+
+			<div class="hidden-info" ng-show="showDetails">
+				<ul>
+					<li>{{contact.phone}}</li>
+					<li>{{contact.email}}</li>
+					<li>{{contact.address}}</li>
+					<li>{{contact.city}}, {{contact.state}}</li>
+					<li>{{contact.join_date}}</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<footer>
+		<div class="pagination pagination-centered pagination-container" ng-show="contacts.length">
+			<ul class="pagination-controle pagination">
+				<li>
+					<button type="button" class="btn btn-primary btn-custom" ng-disabled="prevPageDisabled()"
+							ng-click="prevPage()">PREV
+					</button>
+				</li>
+				<li>
+					<span class="page-number">Page {{curPage}} of {{ totalPages }}</span>
+				</li>
+				<li>
+					<button type="button" class="btn btn-primary btn-custom"
+							ng-disabled="nextPageDisabled()"
+							ng-click="nextPage()">NEXT</button>
+				</li>
+			</ul>
+			<select class="page-number-selector" ng-model="pageSize" ng-change="changeAmount()">
+				<option value="10" selected>View 10</option>
+				<option value="20">View 20</option>
+				<option value="50">View 50</option>
+			</select>
+		</div>
+	</footer>
+</div>
